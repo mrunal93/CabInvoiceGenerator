@@ -17,5 +17,15 @@ namespace CabInvoiceGenerator
                 return MINIMUM_FARE;
             return totalFare;
         }
+
+        public double CalculateMultipleFare(MultipleRides[] rides)
+        {
+            double totalFare = 0;
+            foreach(MultipleRides ride in rides)
+            {
+                totalFare += this.CalculateFare(ride.distance, ride.time);
+            }
+            return totalFare;
+        }
     }
 }
