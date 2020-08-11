@@ -5,6 +5,9 @@ CabInvoiceGenerator/CabInvoiceGenerator/CabInvoiceGenerator.csproj
 CabInvoiceGenerator/CabInvoiceGenerator/obj
 CabInvoiceGenerator/CabInvoiceGeneratorNunitTest/CabInvoiceGeneratorNunitTest.csproj
 CabInvoiceGenerator/CabInvoiceGeneratorNunitTest/obj
+CabInvoiceGenerator/CabInvoiceGenerator/bin
+CabInvoiceGenerator/CabInvoiceGeneratorNunitTest/bin
+
 # Log file
 *.log
 
