@@ -1,18 +1,18 @@
+using CabInvoiceGenerator;
 using NUnit.Framework;
 
 namespace CabInvoiceGeneratorNunitTest
 {
     public class CabInvoiceGeneratorTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void GivenDistanceAndTime_ThenCalculateFare_ShouldReturnTotalFare()
         {
-            Assert.Pass();
+            InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
+            double DISTANCE = 2.0;
+            int TIME = 5;
+            double fare = invoiceGenerator.CalculateFare(DISTANCE, TIME);
+            Assert.AreEqual(25, fare);
         }
     }
 }
