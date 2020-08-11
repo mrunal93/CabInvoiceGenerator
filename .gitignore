@@ -1,6 +1,10 @@
 # Compiled class file
 *.class
-
+CabInvoiceGenerator/.vs
+CabInvoiceGenerator/CabInvoiceGenerator/CabInvoiceGenerator.csproj
+CabInvoiceGenerator/CabInvoiceGenerator/obj
+CabInvoiceGenerator/CabInvoiceGeneratorNunitTest/CabInvoiceGeneratorNunitTest.csproj
+CabInvoiceGenerator/CabInvoiceGeneratorNunitTest/obj
 # Log file
 *.log
 
