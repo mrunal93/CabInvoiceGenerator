@@ -21,11 +21,27 @@ namespace CabInvoiceGenerator
         public double CalculateMultipleFare(MultipleRides[] rides)
         {
             double totalFare = 0;
-            foreach(MultipleRides ride in rides)
+            foreach (MultipleRides ride in rides)
             {
                 totalFare += this.CalculateFare(ride.distance, ride.time);
             }
             return totalFare;
+        }
+
+        public EnhancedInvoice CalculateMultipleFareRidesSummary(MultipleRides[] rides)
+        {
+            double totalFare = 0;
+            int numberOfRides = 0;
+            foreach(MultipleRides ride in rides)
+            {
+                totalFare += CalculateFare(ride.distance, ride.time);
+                numberOfRides += 1;
+            }
+            EnhancedInvoice invoiceSummary = new EnhancedInvoice();
+            invoiceSummary.numberOfRides = numberOfRides;
+            invoiceSummary.totalFare = totalFare;
+            invoiceSummary.AverageFareOfCab();
+            return invoiceSummary;
         }
     }
 }
