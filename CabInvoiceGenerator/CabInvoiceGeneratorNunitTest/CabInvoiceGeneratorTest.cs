@@ -21,7 +21,7 @@ namespace CabInvoiceGeneratorNunitTest
             InvoiceGenerator invoiceGenerator = new InvoiceGenerator();
             MultipleRides[] rides = { new MultipleRides(2.0, 5), new MultipleRides(3.0, 6) };
             double fare = invoiceGenerator.CalculateMultipleFare(rides);
-            Assert.AreEqual(61, fare,0.0);
+            Assert.AreEqual(61, fare);
         }
 
         [Test]
@@ -29,10 +29,9 @@ namespace CabInvoiceGeneratorNunitTest
         {
             InvoiceGenerator invoice = new InvoiceGenerator();
             MultipleRides[] rides = { new MultipleRides(2.0, 5), new MultipleRides(3.0, 6) };
-            EnhancedInvoice invoiceSummary = invoice.CalculateMultipleFareRidesSummary(rides);
-            EnhancedInvoice expected = new EnhancedInvoice { numberOfRides = 2, totalFare = 61, averageFarePerRide = 30.5 };
+            double invoiceSummary = invoice.CalculateMultipleFare(rides);
+            EnhancedInvoice expected = new EnhancedInvoice(2,61);
             object.Equals(expected, invoiceSummary);
-
         }
     }
 }
