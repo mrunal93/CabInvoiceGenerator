@@ -47,8 +47,8 @@ namespace CabInvoiceGeneratorNunitTest
         [Test]
         public void GivenUerIDAndListOfRides_WhenCalculated_ThenShouldReturnPremiumInvoice()
         {
-            string userId1 = "Priyansh";
-            string userId2 = "Ankre";
+            string userId1 = "Mrunal";
+            string userId2 = "Agentnas";
             MultipleRides[] rides1 = { new MultipleRides(CabRide.PREMIUM, 2, 5), new MultipleRides(CabRide.PREMIUM, 0.1, 1) };
             MultipleRides[] rides2 = { new MultipleRides(CabRide.PREMIUM, 2, 5), new MultipleRides(CabRide.PREMIUM, 0.1, 1) };
             RideRepository rideRepository = new RideRepository();
