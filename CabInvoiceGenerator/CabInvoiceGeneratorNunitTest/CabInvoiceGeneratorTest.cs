@@ -33,5 +33,15 @@ namespace CabInvoiceGeneratorNunitTest
             EnhancedInvoice expected = new EnhancedInvoice(2,61);
             object.Equals(expected, invoiceSummary);
         }
+
+        [Test]
+        public void GivenUserIdAndMultipleRides_ThenCalculateFare_shouldReturnNullUserException()
+        {
+            string userId = null;
+            MultipleRides[] rides = { new MultipleRides(2, 5), new MultipleRides(3, 6) };
+            RideRepository rideRepository = new RideRepository();
+            CustomException exception = Assert.Throws<CustomException>(() => rideRepository.AddRides(userId, rides));
+            Assert.AreEqual("NULL_EXCEPTION", exception.message);
+        }
     }
 }
