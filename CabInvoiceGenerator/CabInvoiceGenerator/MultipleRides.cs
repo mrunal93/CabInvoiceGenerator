@@ -8,11 +8,13 @@ namespace CabInvoiceGenerator
     {
         public double distance;
         public int time;
+        public CabRide rideType;
         
-        public MultipleRides(double distance,int time)
+        public MultipleRides(CabRide rideType,double distance,int time)
         {
             this.distance = distance;
             this.time = time;
+            this.rideType = rideType;
         }
     }
 }
